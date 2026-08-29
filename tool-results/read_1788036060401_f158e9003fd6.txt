@@ -1,0 +1,2002 @@
+     1→<?xml version="1.0" encoding="UTF-8" ?>
+     2→<!DOCTYPE html>
+     3→<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+     4→  <head>
+     5→    <b:include name='theme-head'/>
+     6→ <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+     7→     <b:if cond='!data:view.isLayoutMode'>
+     8→<!-- Template Style CSS -->
+     9→<b:skin version='1.0.0'><![CDATA[/* 
+    10→-----------------------------------------------
+    11→Blogger Template Style
+    12→Name:        Newsim
+    13→License:     Free Version
+    14→Version:     1.0
+    15→Author:      TemplatesYard
+    16→Author Url:  https://www.templatesyard.com/
+    17→----------------------------------------------- */
+    18→
+    19→/*
+    20→<!-- Variable definitions -->
+    21→<Variable name="keycolor" description="Main Color" type="color" default="$(main.color)" value="#fe5301"/>
+    22→<Variable name="followByEmail" description="Follow By Email Text" type="string" default="Get all latest content delivered straight to your inbox." value="Get all latest content delivered straight to your inbox."/>
+    23→
+    24→<Group description="Theme Colors" selector="body">
+    25→ <Variable name="main.color" description="Theme Color" type="color" default="#fe5301" value="#fe5301"/>
+    26→  <Variable name="main.dark.color" description="Dark Color" type="color" default="#000000" value="#000000"/>
+    27→  <Variable name="header.bg" description="Header Background" type="color" default="#47164F" value="#47164F"/>
+    28→  <Variable name="menu.color" description="Menu Color" type="color" default="#ffffff" value="#ffffff"/>
+    29→  <Variable name="submenu.bg" description="SubMenu Background" type="color" default="#ffffff" value="#ffffff"/>
+    30→  <Variable name="submenu.color" description="SubMenu Color" type="color" default="#1f2024" value="#1f2024"/>
+    31→  <Variable name="title.color" description="Title Color" type="color" default="#000000" value="#000000"/>
+    32→  <Variable name="widget.title" description="Widget Title Color" type="color" default="#000000" value="#000000"/>
+    33→  <Variable name="footer.bg" description="Footer Backgroundr" type="color" default="#47164F" value="#47164F"/>
+    34→  <Variable name="footer.color" description="Footer Color" type="color" default="#ffffff" value="#ffffff"/>
+    35→</Group>
+    36→
+    37→<Group description="Theme Body" selector="body">
+    38→  <Variable name="body.background.color" description="Body Background Color" type="color" default="#f2f6f8"  value="#f2f6f8"/>
+    39→  <Variable name="body.background" description="Background" type="background" color="$(body.background.color)" default="$(color) url() repeat fixed top left" value="$(color) url() repeat fixed top left"/>
+    40→  <Variable name="body.text.color" description="Text Color" type="color" default="#656565"  value="#656565"/>
+    41→  <Variable name="body.link.color" description="Link Color" type="color" default="$(main.color)"  value="#fe5301"/>
+    42→</Group>
+    43→ 
+    44→<!-- Extra Variables -->
+    45→<Variable name="body.text.font" description="Font" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    46→<Variable name="title.font" description="Title Font" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    47→<Variable name="posts.background.color" description="Post background color" hideEditor="true" type="color" default="#ffffff"  value="#ffffff"/>
+    48→<Variable name="tabs.font" description="Font 2" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    49→<Variable name="posts.title.color" description="Post title color" hideEditor="true" type="color" default="#000000"  value="#000000"/>
+    50→<Variable name="posts.text.color" description="Post text color" hideEditor="true" type="color" default="#656565"  value="#656565"/>
+    51→<Variable name="posts.icons.color" description="Post icons color" hideEditor="true" type="color" default="$(main.color)"  value="#3c5a98"/>
+    52→<Variable name="labels.background.color" description="Label background color" hideEditor="true" type="color" default="$(main.color)"  value="#3c5a98"/>
+    53→*/
+    54→
+    55→/*-- Google Fonts --*/
+    56→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96fp56N1.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    57→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk967p56N1.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    58→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96bp56N1.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    59→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96np56N1.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    60→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96Xp56N1.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    61→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    62→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    63→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLsx6jx4w.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    64→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLlx6jx4w.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    65→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLtx6jx4w.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    66→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLix6jx4w.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    67→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLux6jx4w.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    68→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLvx6jx4w.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    69→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLhx6g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    70→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    71→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    72→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    73→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    74→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51w0IzIFKw.woff2) format("woff2");unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF}
+    75→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51wmIzIFKw.woff2) format("woff2");unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF}
+    76→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    77→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    78→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    79→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    80→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    81→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    82→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    83→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1MunmxKOzY.woff2) format("woff2");unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF}
+    84→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1MujGxKOzY.woff2) format("woff2");unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF}
+    85→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    86→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    87→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    88→
+    89→/*-- Reset CSS --*/
+    90→ .CSS_LIGHTBOX{z-index:999999!important}.CSS_LIGHTBOX_ATTRIBUTION_INDEX_CONTAINER .CSS_HCONT_CHILDREN_HOLDER > .CSS_LAYOUT_COMPONENT.CSS_HCONT_CHILD:first-child > .CSS_LAYOUT_COMPONENT{opacity:0}a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{
+    91→    padding:0;
+    92→    border:0;
+    93→    outline:0;
+    94→    vertical-align:baseline;
+    95→    background:0 0;
+    96→    text-decoration:none
+    97→}
+    98→#google_translate_element { clear: both; }.thread-expanded .thread-count a { display: none; }.comments .continue { display: none!important; } 
+    99→form,textarea,input,button{
+   100→    -webkit-appearance:none;
+   101→    -moz-appearance:none;
+   102→    appearance:none;
+   103→    border-radius:0
+   104→}
+   105→dl,ul{
+   106→    list-style-position:inside;
+   107→    font-weight:400;
+   108→    list-style:none
+   109→}
+   110→ul li{
+   111→    list-style:none
+   112→}
+   113→caption,th{
+   114→    text-align:center
+   115→}
+   116→img{
+   117→    border:none;
+   118→    position:relative
+   119→}
+   120→a,a:visited{
+   121→    text-decoration:none
+   122→}
+   123→.clearfix{
+   124→    clear:both
+   125→}
+   126→.section,.widget,.widget ul{
+   127→    margin:0;
+   128→    padding:0
+   129→}
+   130→a{
+   131→    color:$(body.link.color)
+   132→}
+   133→* {
+   134→    box-sizing: border-box;
+   135→}
+   136→/* visited link */
+   137→.post-body a:visited {
+   138→  color: blue;
+   139→}
+   140→
+   141→/* selected link */
+   142→a:active {
+   143→  color: blue;
+   144→}
+   145→a img{
+   146→    border:0
+   147→}
+   148→abbr{
+   149→    text-decoration:none
+   150→}
+   151→.CSS_LIGHTBOX{
+   152→    z-index:999999!important
+   153→}
+   154→.separator a{
+   155→    clear:none!important;
+   156→    float:none!important;
+   157→    margin-left:0!important;
+   158→    margin-right:0!important
+   159→}
+   160→#navbar-iframe,.widget-item-control,a.quickedit,.home-link,.feed-links{
+   161→    display:none!important
+   162→}
+   163→.center{
+   164→    display:table;
+   165→    margin:0 auto;
+   166→    position:relative
+   167→}
+   168→.widget > h2,.widget > h3{
+   169→    display:none
+   170→}
+   171→/*-- Body Content CSS --*/
+   172→ body{
+   173→    background:$(body.background);
+   174→    background-color:$(body.background.color);
+   175→    font-family:"Roboto", sans-serif;
+   176→    font-size:14px;
+   177→    font-weight:400;
+   178→    color:$(body.text.color);
+   179→    word-wrap:break-word;
+   180→    margin:0;
+   181→    padding:0
+   182→}
+   183→ h1,h2,h3,h4,h5,h6{
+   184→    font-family:'Alegreya',Arial,sans-serif;
+   185→}
+   186→ #outer-wrapper{
+   187→    margin:0 auto;
+   188→    background: #ffffff;
+   189→    box-shadow:0 0 5px rgba(0,0,0,.1)
+   190→}
+   191→ .row{
+   192→    width:1078px
+   193→}
+   194→ #content-wrapper{
+   195→    margin:40px auto 30px;
+   196→}
+   197→ #content-wrapper > .container{
+   198→    margin:0
+   199→}
+   200→ #main-wrapper{
+   201→    float:left;
+   202→    overflow:hidden;
+   203→    width:calc(100% - (320px + 30px));
+   204→    box-sizing:border-box;
+   205→    word-wrap:break-word;
+   206→    padding:0;
+   207→    margin:0
+   208→}
+   209→ #sidebar-wrapper{
+   210→    float:right;
+   211→    overflow:hidden;
+   212→    width:320px;
+   213→    box-sizing:border-box;
+   214→    word-wrap:break-word;
+   215→    padding:0
+   216→}
+   217→ .post-image-wrap{
+   218→    position:relative;
+   219→    display:block
+   220→}
+   221→ .post-image-link,.about-author .avatar-container,.comments .avatar-image-container{
+   222→    background-color:rgba(155,155,155,0.07);
+   223→    color:transparent!important
+   224→}
+   225→.index-post .post-thumb {
+   226→  
+   227→}
+   228→ .post-thumb{
+   229→    display:block;
+   230→    position:relative;
+   231→    width:100%;
+   232→    height:100%;
+   233→   object-fit:cover;
+   234→    object-position: top;
+   235→    z-index:1;
+   236→    opacity: 0;
+   237→    transition:opacity .17s ease,transform .35s ease
+   238→}
+   239→.post-thumb.lazy-yard {
+   240→    opacity: 1;
+   241→}
+   242→ .post-image-link:hover .post-thumb,.post-image-wrap:hover .post-image-link .post-thumb,.hot-item-inner:hover .post-image-link .post-thumb{
+   243→   transform: scale(1.05);
+   244→}
+   245→ .post-image-link:hover .post-thumb,.post-image-wrap:hover .post-image-link .post-thumb{
+   246→    opacity:.9
+   247→}
+   248→ .item-post .post-body img{
+   249→    max-width:100%;
+   250→opacity: 0;
+   251→    transition: opacity .17s ease,transform .35s ease;
+   252→}
+   253→.item-post .post-body img.lazy-yard{
+   254→opacity: 1;
+   255→}
+   256→ .post-title a{
+   257→    display:block
+   258→}
+   259→#top-bar{
+   260→    width:100%;
+   261→    height:34px;
+   262→background-image: linear-gradient(90deg, $(header.bg) 0%, $(header.bg));
+   263→    overflow:hidden;
+   264→    margin:0
+   265→}
+   266→ #top-bar .container{
+   267→    margin:0 auto
+   268→}
+   269→ .top-bar-nav{
+   270→    position:relative;
+   271→    float:left;
+   272→    display:block
+   273→}
+   274→ .top-bar-nav .widget > .widget-title{
+   275→    display:none
+   276→}
+   277→ .top-bar-nav ul li{
+   278→    float:left
+   279→}
+   280→ .top-bar-nav ul li > a{
+   281→    height:34px;
+   282→    display:block;
+   283→    color:$(menu.color);
+   284→    font-size:12px;
+   285→    font-weight:400;
+   286→    line-height:34px;
+   287→    margin:0 10px 0 0;
+   288→    padding:0 5px;
+   289→    transition:color .17s
+   290→}
+   291→ .top-bar-nav ul li:first-child > a{
+   292→    padding:0 5px 0 0
+   293→}
+   294→ .top-bar-nav ul > li:hover > a{
+   295→    color:$(main.color)
+   296→}
+   297→ .top-bar-social{
+   298→    position:relative;
+   299→    float:right;
+   300→    display:block
+   301→}
+   302→ .top-bar-social .widget > .widget-title{
+   303→    display:none
+   304→}
+   305→ .top-bar-social ul > li{
+   306→    float:left;
+   307→    display:inline-block
+   308→}
+   309→ .top-bar-social ul > li > a{
+   310→    display:block;
+   311→    color:$(menu.color);
+   312→    text-decoration:none;
+   313→    font-size:14px;
+   314→    text-align:center;
+   315→    line-height:34px;
+   316→    padding:0 5px;
+   317→    margin:0 0 0 10px;
+   318→    transition:color .17s
+   319→}
+   320→.top-bar-social ul > li.facebook > a {
+   321→    margin: 0;
+   322→}
+   323→ .top-bar-social ul > li:last-child > a{
+   324→    padding:0 0 0 5px
+   325→}
+   326→ .top-bar-social ul > li:hover > a{
+   327→    color:$(main.color)
+   328→}
+   329→ .social a:before{
+   330→    display:inline-block;
+   331→    font-family:'Font Awesome 5 Brands';
+   332→    font-style:normal;
+   333→    font-weight:400
+   334→}
+   335→ .social .facebook a:before{
+   336→    content:"\f09a"
+   337→}
+   338→ .social .twitter a:before{
+   339→    content:"\f099"
+   340→}
+   341→.social .x-twitter a:before{ content:"\e61b" }
+   342→.social-color .x-twitter a{ background-color:#14171A }
+   343→.social-text .x-twitter a:after{ content:"Twitter" } 
+   344→ .social .gplus a:before{
+   345→    content:"\f0d5"
+   346→}
+   347→ .social .rss a:before{
+   348→    content:"\f09e";
+   349→font-family:'Font Awesome 5 Free';
+   350→font-weight:900
+   351→}
+   352→ .social .youtube a:before{
+   353→    content:"\f167"
+   354→}
+   355→ .social .skype a:before{
+   356→    content:"\f17e"
+   357→}
+   358→ .social .stumbleupon a:before{
+   359→    content:"\f1a4"
+   360→}
+   361→ .social .tumblr a:before{
+   362→    content:"\f173"
+   363→}
+   364→ .social .vk a:before{
+   365→    content:"\f189"
+   366→}
+   367→ .social .stack-overflow a:before{
+   368→    content:"\f16c"
+   369→}
+   370→ .social .github a:before{
+   371→    content:"\f09b"
+   372→}
+   373→ .social .linkedin a:before{
+   374→    content:"\f0e1"
+   375→}
+   376→ .social .dribbble a:before{
+   377→    content:"\f17d"
+   378→}
+   379→ .social .soundcloud a:before{
+   380→    content:"\f1be"
+   381→}
+   382→ .social .behance a:before{
+   383→    content:"\f1b4"
+   384→}
+   385→ .social .digg a:before{
+   386→    content:"\f1a6"
+   387→}
+   388→ .social .instagram a:before{
+   389→    content:"\f16d"
+   390→}
+   391→ .social .pinterest a:before{
+   392→    content:"\f0d2"
+   393→}
+   394→ .social .twitch a:before{
+   395→    content:"\f1e8"
+   396→}
+   397→ .social .delicious a:before{
+   398→    content:"\f1a5"
+   399→}
+   400→ .social .codepen a:before{
+   401→    content:"\f1cb"
+   402→}
+   403→ .social .reddit a:before{
+   404→    content:"\f1a1"
+   405→}
+   406→ .social .whatsapp a:before{
+   407→    content:"\f232"
+   408→}
+   409→ .social .snapchat a:before{
+   410→    content:"\f2ac"
+   411→}
+   412→ .social .email a:before{
+   413→    content:"\f0e0";
+   414→font-family: 'Font Awesome 5 Free';
+   415→    font-weight: 400;
+   416→}
+   417→ .social .external-link a:before{
+   418→    content:"\f35d"
+   419→}
+   420→ .social-color .facebook a{
+   421→    background-color:#3b5999
+   422→}
+   423→ .social-color .twitter a{
+   424→    background-color:#00acee
+   425→}
+   426→ .social-color .gplus a{
+   427→    background-color:#db4a39
+   428→}
+   429→ .social-color .youtube a{
+   430→    background-color:#db4a39
+   431→}
+   432→ .social-color .instagram a{
+   433→    background:linear-gradient(15deg,#ffb13d,#dd277b,#4d5ed4)
+   434→}
+   435→ .social-color .pinterest a{
+   436→    background-color:#ca2127
+   437→}
+   438→ .social-color .dribbble a{
+   439→    background-color:#ea4c89
+   440→}
+   441→ .social-color .linkedin a{
+   442→    background-color:#0077b5
+   443→}
+   444→ .social-color .tumblr a{
+   445→    background-color:#365069
+   446→}
+   447→ .social-color .twitch a{
+   448→    background-color:#6441a5
+   449→}
+   450→ .social-color .rss a{
+   451→    background-color:#ffc200
+   452→}
+   453→ .social-color .skype a{
+   454→    background-color:#00aff0
+   455→}
+   456→ .social-color .stumbleupon a{
+   457→    background-color:#eb4823
+   458→}
+   459→ .social-color .vk a{
+   460→    background-color:#4a76a8
+   461→}
+   462→ .social-color .stack-overflow a{
+   463→    background-color:#f48024
+   464→}
+   465→ .social-color .github a{
+   466→    background-color:#24292e
+   467→}
+   468→ .social-color .soundcloud a{
+   469→    background:linear-gradient(#ff7400,#ff3400)
+   470→}
+   471→ .social-color .behance a{
+   472→    background-color:#191919
+   473→}
+   474→ .social-color .digg a{
+   475→    background-color:#1b1a19
+   476→}
+   477→ .social-color .delicious a{
+   478→    background-color:#0076e8
+   479→}
+   480→ .social-color .codepen a{
+   481→    background-color:#000
+   482→}
+   483→ .social-color .reddit a{
+   484→    background-color:#ff4500
+   485→}
+   486→ .social-color .whatsapp a{
+   487→    background-color:#3fbb50
+   488→}
+   489→ .social-color .snapchat a{
+   490→    background-color:#ffe700
+   491→}
+   492→ .social-color .email a{
+   493→    background-color:#888
+   494→}
+   495→ .social-color .external-link a{
+   496→    background-color:$(main.dark.color)
+   497→}
+   498→ .social-text .facebook a:after{
+   499→    content:"Facebook"
+   500→}
+   501→ .social-text .twitter a:after{
+   502→    content:"Twitter"
+   503→}
+   504→ .social-text .gplus a:after{
+   505→    content:"Google Plus"
+   506→}
+   507→ .social-text .rss a:after{
+   508→    content:"Rss"
+   509→}
+   510→ .social-text .youtube a:after{
+   511→    content:"YouTube"
+   512→}
+   513→ .social-text .skype a:after{
+   514→    content:"Skype"
+   515→}
+   516→ .social-text .stumbleupon a:after{
+   517→    content:"StumbleUpon"
+   518→}
+   519→ .social-text .tumblr a:after{
+   520→    content:"Tumblr"
+   521→}
+   522→ .social-text .vk a:after{
+   523→    content:"VKontakte"
+   524→}
+   525→ .social-text .stack-overflow a:after{
+   526→    content:"Stack Overflow"
+   527→}
+   528→ .social-text .github a:after{
+   529→    content:"Github"
+   530→}
+   531→ .social-text .linkedin a:after{
+   532→    content:"LinkedIn"
+   533→}
+   534→ .social-text .dribbble a:after{
+   535→    content:"Dribbble"
+   536→}
+   537→ .social-text .soundcloud a:after{
+   538→    content:"SoundCloud"
+   539→}
+   540→ .social-text .behance a:after{
+   541→    content:"Behance"
+   542→}
+   543→ .social-text .digg a:after{
+   544→    content:"Digg"
+   545→}
+   546→ .social-text .instagram a:after{
+   547→    content:"Instagram"
+   548→}
+   549→ .social-text .pinterest a:after{
+   550→    content:"Pinterest"
+   551→}
+   552→ .social-text .twitch a:after{
+   553→    content:"Twitch"
+   554→}
+   555→ .social-text .delicious a:after{
+   556→    content:"Delicious"
+   557→}
+   558→ .social-text .codepen a:after{
+   559→    content:"CodePen"
+   560→}
+   561→ .social-text .flipboard a:after{
+   562→    content:"Flipboard"
+   563→}
+   564→ .social-text .reddit a:after{
+   565→    content:"Reddit"
+   566→}
+   567→ .social-text .whatsapp a:after{
+   568→    content:"Whatsapp"
+   569→}
+   570→ .social-text .messenger a:after{
+   571→    content:"Messenger"
+   572→}
+   573→ .social-text .snapchat a:after{
+   574→    content:"Snapchat"
+   575→}
+   576→ .social-text .email a:after{
+   577→    content:"Email"
+   578→}
+   579→ .social-text .external-link a:after{
+   580→    content:"WebSite"
+   581→}
+   582→ #header-wrap{
+   583→    position:relative;
+   584→    width:100%;
+   585→    height:70px;
+   586→    background-color: $(header.bg);
+   587→    border-bottom:1px solid #FFFFFF45;
+   588→    z-index:1010;
+   589→}
+   590→ #header-wrap .container{
+   591→    position:relative;
+   592→    margin:0 auto
+   593→}
+   594→ .header-logo{
+   595→    float:left;
+   596→    margin:0 20px 0 0
+   597→}
+   598→ .main-logo{
+   599→    position:relative;
+   600→    float:left;
+   601→    width:auto;
+   602→    max-width:250px;
+   603→    max-height:52px;
+   604→    margin:0;
+   605→    padding:9px 0
+   606→}
+   607→ .main-logo .header-image-wrapper{
+   608→    display:block
+   609→}
+   610→ .main-logo img{
+   611→    max-width:100%;
+   612→    max-height:52px;
+   613→    margin:0
+   614→}
+   615→ .main-logo h1, .main-logo h1 a{
+   616→    color:$(main.dark.color);
+   617→    font-size:20px;
+   618→    line-height:52px;
+   619→    margin:0
+   620→}
+   621→ .main-logo p{
+   622→    font-size:12px;
+   623→    margin:5px 0 0;
+   624→display:none;
+   625→}
+   626→ .header-menu{
+   627→    float:left;
+   628→}
+   629→ #main-menu .widget,#main-menu .widget > h3{
+   630→    display:none
+   631→}
+   632→ #main-menu .show-menu{
+   633→    display:block
+   634→}
+   635→ #main-menu{
+   636→    position:static;
+   637→    height:70px;
+   638→    z-index:15
+   639→}
+   640→ #main-menu ul > li{
+   641→    float:left;
+   642→    position:relative;
+   643→    margin:0;
+   644→    padding:0;
+   645→    transition:background .17s ease
+   646→}
+   647→ #main-menu ul > li > a{
+   648→    position:relative;
+   649→    color:$(menu.color);
+   650→    font-size:14px;
+   651→    font-weight:500;
+   652→    line-height:70px;
+   653→    display:inline-block;
+   654→    text-decoration:none;
+   655→    margin:0;
+   656→    padding:0 15px;
+   657→    transition:color .17s ease
+   658→}
+   659→ #main-menu ul#main-menu-nav > li:hover{
+   660→    background-color:rgba(255,255,255,0.05)
+   661→}
+   662→ #main-menu ul#main-menu-nav > li:hover > a{
+   663→    color:$(menu.color)
+   664→}
+   665→ #main-menu ul > li > ul{
+   666→    position:absolute;
+   667→    float:left;
+   668→    left:0;
+   669→    top:70px;
+   670→    width:180px;
+   671→    background-color:$(submenu.bg);
+   672→    z-index:99999;
+   673→    margin-top:0;
+   674→    padding:0;
+   675→    border:1px solid rgba(155,155,155,0.15);
+   676→    box-shadow:0 2px 2px rgba(0,0,0,0.2);
+   677→    visibility:hidden;
+   678→    opacity:0
+   679→}
+   680→ #main-menu ul > li > ul > li > ul{
+   681→    position:absolute;
+   682→    float:left;
+   683→    top:0;
+   684→    left:100%;
+   685→    margin:-1px 0 0
+   686→}
+   687→ #main-menu ul > li > ul > li{
+   688→    display:block;
+   689→    float:none;
+   690→    position:relative;
+   691→    background-color:rgba(255,255,255,0.03);
+   692→    border-bottom:1px solid rgba(155,155,155,0.15);
+   693→    transition:background .17s ease
+   694→}
+   695→ #main-menu ul > li > ul > li a{
+   696→    display:block;
+   697→    height:36px;
+   698→    font-size:13px;
+   699→    color:$(submenu.color);
+   700→    font-weight:500;
+   701→    line-height:36px;
+   702→    box-sizing:border-box;
+   703→    margin:0;
+   704→    padding:0 15px;
+   705→    transition:color .17s ease
+   706→}
+   707→ #main-menu ul > li > ul > li:last-child{
+   708→    border-bottom:0
+   709→}
+   710→ #main-menu ul > li.has-sub > a:after{
+   711→    content:'\f078';
+   712→    float:right;
+   713→   font-family:'Font Awesome 5 Free';
+   714→    font-size:12px;
+   715→    font-weight:900;
+   716→    margin:0 0 0 6px
+   717→}
+   718→ #main-menu ul > li > ul > li.has-sub > a:after{
+   719→    content:'\f054';
+   720→    float:right;
+   721→    margin:0
+   722→}
+   723→ #main-menu ul > li > ul > li a:hover{
+   724→    color:$(main.color)
+   725→}
+   726→ #main-menu ul > li:hover > ul,#main-menu ul > li > ul > li:hover > ul{
+   727→    visibility:visible;
+   728→    opacity:1
+   729→}
+   730→ #main-menu ul ul{
+   731→    transition:all .17s ease
+   732→}
+   733→#main-menu .mega-menu{
+   734→    position:static!important
+   735→}
+   736→ #main-menu .mega-menu > ul{
+   737→    width:100%;
+   738→    box-sizing:border-box;
+   739→    padding:20px 10px
+   740→}
+   741→ #main-menu .mega-menu > ul.mega-menu-inner{
+   742→    overflow:hidden
+   743→}
+   744→ #main-menu ul > li:hover > ul,#main-menu ul > li > ul > li:hover > ul{
+   745→    visibility:visible;
+   746→    opacity:1
+   747→}
+   748→ #main-menu ul ul{
+   749→    transition:all .25s ease
+   750→}
+   751→ .mega-menu-inner .mega-item{
+   752→    float:left;
+   753→    width:20%;
+   754→    box-sizing:border-box;
+   755→    padding:0 10px
+   756→}
+   757→ .mega-menu-inner .mega-content{
+   758→    position:relative;
+   759→    width:100%;
+   760→    overflow:hidden;
+   761→    padding:0
+   762→}
+   763→ .mega-content .post-image-wrap{
+   764→    width:100%;
+   765→    height:120px
+   766→}
+   767→ .mega-content .post-image-link{
+   768→    width:100%;
+   769→    height:100%;
+   770→    z-index:1;
+   771→    display:block;
+   772→    position:relative;
+   773→    overflow:hidden;
+   774→    padding:0
+   775→}
+   776→ .mega-content .post-title{
+   777→    position:relative;
+   778→    font-size:13px;
+   779→    font-weight:600;
+   780→    line-height:1.5em;
+   781→    margin:7px 0 5px;
+   782→    padding:0
+   783→}
+   784→ .mega-content .post-title a{
+   785→    display:block;
+   786→    color:$(posts.title.color);
+   787→    transition:color .17s
+   788→}
+   789→ .mega-content .post-title a:hover{
+   790→    color:$(main.color)
+   791→}
+   792→ .mega-content .post-meta{
+   793→    font-size:11px
+   794→}
+   795→ .no-posts{
+   796→    float:left;
+   797→    width:100%;
+   798→    height:100px;
+   799→    line-height:100px;
+   800→    text-align:center
+   801→}
+   802→ .mega-menu .no-posts{
+   803→    line-height:60px;
+   804→    color:$(title.color)
+   805→}
+   806→ .show-search,.hide-search{
+   807→    position:absolute;
+   808→    top:0;
+   809→    right:0;
+   810→    display:block;
+   811→    width:58px;
+   812→    height:70px;
+   813→    background-color:rgba(255,255,255,0.05);
+   814→    line-height:70px;
+   815→    z-index:20;
+   816→    color:$(menu.color);
+   817→    font-size:16px;
+   818→    font-weight:400;
+   819→    text-align:center;
+   820→    cursor:pointer;
+   821→    transition:color .17s ease
+   822→}
+   823→ .show-search:hover,.hide-search:hover{
+   824→    color:$(menu.color)
+   825→}
+   826→ .show-search:before{
+   827→    content:"\f002";
+   828→    font-family:'Font Awesome 5 Free';
+   829→    font-weight: 900;
+   830→}
+   831→ .hide-search:before{
+   832→    content:"\f00d";
+   833→    font-family:'Font Awesome 5 Free';
+   834→    font-weight: 900;
+   835→}
+   836→ #nav-search{
+   837→    display:none;
+   838→    position:absolute;
+   839→    left:0;
+   840→    top:0;
+   841→    width:100%;
+   842→    height:70px;
+   843→    z-index:99;
+   844→    background-color:$(header.bg);
+   845→    box-sizing:border-box;
+   846→    padding:0
+   847→}
+   848→ #nav-search .search-form{
+   849→    width:100%;
+   850→    height:70px;
+   851→    background-color:rgba(0,0,0,0);
+   852→    line-height:70px;
+   853→    overflow:hidden;
+   854→    padding:0
+   855→}
+   856→ #nav-search .search-input{
+   857→    width:100%;
+   858→    height:70px;
+   859→    font-family:inherit;
+   860→    color:$(menu.color);
+   861→    margin:0;
+   862→    padding:0 58px 0 10px;
+   863→    background-color:rgba(0,0,0,0);
+   864→    font-size:13px;
+   865→    font-weight:400;
+   866→    box-sizing:border-box;
+   867→    border:0
+   868→}
+   869→ #nav-search .search-input:focus{
+   870→    color:$(menu.color);
+   871→    outline:none
+   872→}
+   873→ .mobile-menu-toggle{
+   874→    display:none;
+   875→    position:absolute;
+   876→    top:0;
+   877→    left:0;
+   878→    width:58px;
+   879→    height:70px;
+   880→    line-height:70px;
+   881→    background-color:rgba(255,255,255,0.05);
+   882→    z-index:20;
+   883→    color:$(menu.color);
+   884→    font-size:17px;
+   885→    font-weight:400;
+   886→    text-align:center;
+   887→    cursor:pointer;
+   888→    transition:color .17s ease
+   889→}
+   890→ .mobile-menu-toggle:hover{
+   891→    color:$(menu.color)
+   892→}
+   893→ .mobile-menu-toggle:before{
+   894→    content:"\f0c9";
+   895→  font-family:'Font Awesome 5 Free';
+   896→font-weight:900;
+   897→}
+   898→ .nav-active .mobile-menu-toggle:before{
+   899→    content:"\f00d";
+   900→  font-family:'Font Awesome 5 Free';
+   901→font-weight:900;
+   902→}
+   903→ .overlay{
+   904→    display:none;
+   905→    position:fixed;
+   906→    top:0;
+   907→    left:0;
+   908→    right:0;
+   909→    bottom:0;
+   910→    z-index:990;
+   911→    background:rgba(255,255,255,0.8)
+   912→}
+   913→ .mobile-menu-wrap{
+   914→    display:none;
+   915→    position:absolute;
+   916→    top:70px;
+   917→    left:0;
+   918→    width:100%;
+   919→    background-color:$(submenu.bg);
+   920→    box-sizing:border-box;
+   921→    visibility:hidden;
+   922→    z-index:1000;
+   923→    opacity:0;
+   924→    transition:all .17s ease
+   925→}
+   926→ .nav-active .mobile-menu-wrap{
+   927→    visibility:visible;
+   928→    opacity:1
+   929→}
+   930→ .mobile-menu{
+   931→    position:relative;
+   932→    overflow:hidden;
+   933→    padding:20px;
+   934→    border-top:1px solid rgba(255,255,255,0.03)
+   935→}
+   936→ .mobile-menu > ul{
+   937→    margin:0
+   938→}
+   939→ .mobile-menu .m-sub{
+   940→    display:none;
+   941→    padding:0
+   942→}
+   943→ .mobile-menu ul li{
+   944→    position:relative;
+   945→    display:block;
+   946→    overflow:hidden;
+   947→    float:left;
+   948→    width:100%;
+   949→    font-size:14px;
+   950→    line-height:38px
+   951→}
+   952→ .mobile-menu > ul > li{
+   953→    font-weight:500;
+   954→}
+   955→ .mobile-menu > ul li ul{
+   956→    overflow:hidden
+   957→}
+   958→ .mobile-menu ul li a{
+   959→    color:$(submenu.color);
+   960→    padding:0;
+   961→    display:block;
+   962→    transition:all .17s ease
+   963→}
+   964→ .mobile-menu ul li.has-sub .submenu-toggle{
+   965→    position:absolute;
+   966→    top:0;
+   967→    right:0;
+   968→    color:$(submenu.color);
+   969→    cursor:pointer
+   970→}
+   971→ .mobile-menu ul li.has-sub .submenu-toggle:after{
+   972→    content:'\f105';
+   973→    font-family:'Font Awesome 5 Free';
+   974→    font-weight:900;
+   975→    float:right;
+   976→    width:34px;
+   977→    font-size:14px;
+   978→    text-align:center;
+   979→    transition:all .17s ease
+   980→}
+   981→ .mobile-menu ul li.has-sub.show > .submenu-toggle:after{
+   982→    transform:rotate(90deg)
+   983→}
+   984→ .mobile-menu > ul > li > ul > li > a{
+   985→    color:$(submenu.color);
+   986→    opacity:.7;
+   987→    padding:0 0 0 15px
+   988→}
+   989→ .mobile-menu > ul > li > ul > li > ul > li > a{
+   990→    color:$(submenu.color);
+   991→    opacity:.7;
+   992→    padding:0 0 0 30px
+   993→}
+   994→.ad-wrapper .widget > .widget-title {
+   995→    display: none;
+   996→}
+   997→.ad-wrapper {
+   998→margin:0 auto;
+   999→}
+  1000→.ad-wrapper .widget-content {
+  1001→    position:relative;
+  1002→    max-width:100%;
+  1003→    max-height:92px;
+  1004→    line-height:1;
+  1005→    margin:30px auto 0
+  1006→}
+  1007→#prev-ad .widget, #nxt-ad .widget {
+  1008→    width: 100%;
+  1009→    margin: 20px 0 0;
+  1010→    border-top: 1px solid #f2f2f6;
+  1011→    padding: 15px 0 0;
+  1012→    box-sizing: border-box;
+  1013→}
+  1014→#nxt-ad .widget {
+  1015→    padding-bottom: 15px;
+  1016→    margin-bottom: 15px;
+  1017→    border-bottom: 1px solid #f2f2f6;
+  1018→}
+  1019→#home-ad-top2 .widget-content {
+  1020→margin:0 auto 30px
+  1021→}
+  1022→.owl-carousel{
+  1023→    display:none;
+  1024→    width:100%;
+  1025→    -webkit-tap-highlight-color:transparent;
+  1026→    position:relative;
+  1027→    z-index:1
+  1028→}
+  1029→ .owl-carousel .owl-stage{
+  1030→    position:relative;
+  1031→    -ms-touch-action:pan-Y
+  1032→}
+  1033→ .owl-carousel .owl-stage:after{
+  1034→    content:".";
+  1035→    display:block;
+  1036→    clear:both;
+  1037→    visibility:hidden;
+  1038→    line-height:0;
+  1039→    height:0
+  1040→}
+  1041→ .owl-carousel .owl-stage-outer{
+  1042→    position:relative;
+  1043→    overflow:hidden;
+  1044→    -webkit-transform:translate3d(0px,0px,0px)
+  1045→}
+  1046→ .owl-carousel .owl-controls .owl-nav .owl-prev,.owl-carousel .owl-controls .owl-nav .owl-next,.owl-carousel .owl-controls .owl-dot{
+  1047→    cursor:pointer;
+  1048→    cursor:hand;
+  1049→    -webkit-user-select:none;
+  1050→    -khtml-user-select:none;
+  1051→    -moz-user-select:none;
+  1052→    -ms-user-select:none;
+  1053→    user-select:none
+  1054→}
+  1055→ .owl-carousel.owl-loaded{
+  1056→    display:block
+  1057→}
+  1058→ .owl-carousel.owl-loading{
+  1059→    opacity:0;
+  1060→    display:block
+  1061→}
+  1062→ .owl-carousel.owl-hidden{
+  1063→    opacity:0
+  1064→}
+  1065→ .owl-carousel .owl-refresh .owl-item{
+  1066→    display:none
+  1067→}
+  1068→ .owl-carousel .owl-item{
+  1069→    position:relative;
+  1070→    min-height:1px;
+  1071→    float:left;
+  1072→    -webkit-backface-visibility:visible;
+  1073→    -webkit-tap-highlight-color:transparent;
+  1074→    -webkit-touch-callout:none;
+  1075→    -webkit-user-select:none;
+  1076→    -moz-user-select:none;
+  1077→    -ms-user-select:none;
+  1078→    user-select:none
+  1079→}
+  1080→ .owl-carousel.owl-text-select-on .owl-item{
+  1081→    -webkit-user-select:auto;
+  1082→    -moz-user-select:auto;
+  1083→    -ms-user-select:auto;
+  1084→    user-select:auto
+  1085→}
+  1086→ .owl-carousel .owl-grab{
+  1087→    cursor:move;
+  1088→    cursor:-webkit-grab;
+  1089→    cursor:-o-grab;
+  1090→    cursor:-ms-grab;
+  1091→    cursor:grab
+  1092→}
+  1093→ .owl-carousel.owl-rtl{
+  1094→    direction:rtl
+  1095→}
+  1096→ .owl-carousel.owl-rtl .owl-item{
+  1097→    float:right
+  1098→}
+  1099→ .no-js .owl-carousel{
+  1100→    display:block
+  1101→}
+  1102→ .owl-carousel .animated{
+  1103→    -webkit-animation-duration:1000ms;
+  1104→    animation-duration:1000ms;
+  1105→    -webkit-animation-fill-mode:both;
+  1106→    animation-fill-mode:both
+  1107→}
+  1108→ .owl-carousel .owl-animated-in{
+  1109→    z-index:1
+  1110→}
+  1111→ .owl-carousel .owl-animated-out{
+  1112→    z-index:0
+  1113→}
+  1114→ .owl-height{
+  1115→    -webkit-transition:height 500ms ease-in-out;
+  1116→    -moz-transition:height 500ms ease-in-out;
+  1117→    -ms-transition:height 500ms ease-in-out;
+  1118→    -o-transition:height 500ms ease-in-out;
+  1119→    transition:height 500ms ease-in-out
+  1120→}
+  1121→ .owl-prev,.owl-next{
+  1122→    position:relative;
+  1123→    float:left;
+  1124→    width:24px;
+  1125→    height:24px;
+  1126→    background-color:$(main.dark.color);
+  1127→    font-family:'Font Awesome 5 Free';
+  1128→    font-weight: 900;
+  1129→    text-rendering: auto;
+  1130→    -webkit-font-smoothing: antialiased;
+  1131→    -moz-osx-font-smoothing: grayscale;
+  1132→    font-size:14px;
+  1133→    line-height:24px;
+  1134→    color:#ffffff;
+  1135→    text-align:center;
+  1136→    cursor:pointer;   
+  1137→    border-radius: 50%;
+  1138→    border:0px solid rgba(0,0,0,0.08);
+  1139→    box-sizing:border-box;
+  1140→    transition:all .25s ease
+  1141→}
+  1142→ .owl-prev:before{
+  1143→    content:'\f053'
+  1144→}
+  1145→ .owl-next:before{
+  1146→    content:'\f054'
+  1147→}
+  1148→ .owl-prev:hover,.owl-next:hover{
+  1149→    background-color:$(main.color);
+  1150→    color:#fff;
+  1151→    border-color:$(main.color)
+  1152→}
+  1153→ #break-section .widget{
+  1154→    display:none;
+  1155→    background:#FDF2FF;
+  1156→    border: 1px solid #d1e9f9;
+  1157→    border-radius:3px;
+  1158→    padding: 5px;
+  1159→}
+  1160→#break-section .hot-loader {
+  1161→    height: 30px;
+  1162→}
+  1163→#break-section .hot-loader:after {
+  1164→    width: 13px;
+  1165→    height: 13px;
+  1166→    margin: -8px 0 0 -8px;
+  1167→}
+  1168→.ticker-widget .post-image-link, #break-section .PopularPosts .ticker-widget .post-image-link {
+  1169→    position: relative;
+  1170→    width: 35px;
+  1171→    height: 30px;
+  1172→    float: left;
+  1173→    overflow: hidden;
+  1174→    display: block;
+  1175→    vertical-align: middle;
+  1176→    margin: 0 12px 0 0;
+  1177→    border-radius: 2px;
+  1178→}
+  1179→#break-wrapper-outer {
+  1180→    overflow:hidden;
+  1181→}
+  1182→#break-wrapper {
+  1183→    padding: 0;
+  1184→    box-sizing: border-box;
+  1185→}
+  1186→ #break-wrapper{
+  1187→    margin:0 auto 30px
+  1188→}
+  1189→ #break-section .widget{
+  1190→    display:none
+  1191→}
+  1192→ #break-section .show-ticker, #break-section .PopularPosts{
+  1193→  align-items: flex-start;
+  1194→    padding: 0;
+  1195→    margin: 0;
+  1196→    display: flex;
+  1197→}
+  1198→ #break-section .no-posts{
+  1199→    height:40px;
+  1200→    line-height:40px;
+  1201→    text-align:center;
+  1202→    padding:0;
+  1203→box-sizing: border-box;
+  1204→}
+  1205→ #break-section .widget > .widget-title{
+  1206→padding: 0 30px 0 0;
+  1207→}
+  1208→#break-section .widget > .widget-title > h3 {
+  1209→font-size: 14px;
+  1210→    font-family:"Roboto", sans-serif;
+  1211→position:relative;
+  1212→background-color: #d1e9f9;
+  1213→color: $(title.color);
+  1214→font-weight: 700;
+  1215→line-height: 40px;
+  1216→padding: 0 15px;
+  1217→margin:0;
+  1218→text-transform: uppercase;
+  1219→}
+  1220→#break-section .widget > .widget-title > h3:before {
+  1221→    content: '\f0e7';
+  1222→    font-family: 'Font Awesome 5 Free';
+  1223→    float: left;
+  1224→    font-size: 11px;
+  1225→    font-weight: 900;
+  1226→    margin: 0 5px 0 0;
+  1227→    text-rendering: auto;
+  1228→    -webkit-font-smoothing: antialiased;
+  1229→    -moz-osx-font-smoothing: grayscale;
+  1230→}
+  1231→ #break-section .widget-content{
+  1232→   position:relative;
+  1233→font-size:13px;
+  1234→display: flex;
+  1235→    justify-content: center;
+  1236→    align-items: center;
+  1237→flex: 1;
+  1238→overflow:hidden;
+  1239→height:40px;
+  1240→padding:0;
+  1241→box-sizing: border-box;
+  1242→float: left;
+  1243→width: 100%;
+  1244→}
+  1245→ ul.ticker-widget{
+  1246→    width:100%!important;
+  1247→    box-sizing:border-box;
+  1248→    padding:0
+  1249→}
+  1250→ .PopularPosts ul.ticker-widget {
+  1251→    opacity:0;
+  1252→    transition: opacity .17s ease,transform .35s ease;
+  1253→}
+  1254→ .PopularPosts ul.ticker-widget.owl-carousel.owl-theme.owl-loaded {
+  1255→   opacity:1;
+  1256→}
+  1257→ .ticker-widget .ticker-item{
+  1258→   position: relative;
+  1259→    float: left;
+  1260→    display: block;
+  1261→    padding: 0;
+  1262→    -webkit-box-align: center;
+  1263→    -ms-flex-align: center;
+  1264→    align-items: center;
+  1265→    box-sizing: border-box;
+  1266→}
+  1267→.ticker-widget .post-info, #break-section .PopularPosts .ticker-widget .post-info {
+  1268→    overflow: hidden;
+  1269→    z-index: 5;
+  1270→    box-sizing: border-box;
+  1271→    padding: 0;
+  1272→}
+  1273→ .ticker-widget .post-title, #break-section .PopularPosts .ticker-widget .post-title{
+  1274→    font-size:13px;
+  1275→    font-weight:600;
+  1276→    line-height:30px;
+  1277→    margin:0;
+  1278→    padding:0;
+  1279→    float:left;
+  1280→}
+  1281→ .ticker-widget .post-title a, #break-section .PopularPosts .ticker-widget .post-title a{
+  1282→    position:relative;
+  1283→    display: -webkit-box;
+  1284→    -webkit-line-clamp: 1;
+  1285→    -webkit-box-orient: vertical;
+  1286→    overflow: hidden;
+  1287→    color:$(title.color);
+  1288→    transition:color .25s
+  1289→}
+  1290→ .ticker-widget .post-title a:hover, #break-section .PopularPosts .ticker-widget .post-title a:hover{
+  1291→    color:$(main.color)
+  1292→}
+  1293→.ticker-widget .post-tag {
+  1294→    position: static;    
+  1295→    background-color: $(main.dark.color);
+  1296→    float: left;
+  1297→    margin: 6px 10px 0 0;
+  1298→    line-height: 18px;
+  1299→}
+  1300→ .ticker-widget .owl-nav{
+  1301→    position:absolute;
+  1302→    bottom: 4px;
+  1303→    right: 4px;
+  1304→    z-index: 5;
+  1305→}
+  1306→.ticker-widget .owl-nav .owl-prev{
+  1307→
+  1308→}
+  1309→ .ticker-widget .owl-nav .owl-next{
+  1310→    margin:0 0 0 4px
+  1311→}
+  1312→@keyframes fadeInLeft {
+  1313→     from{
+  1314→        opacity:0;
+  1315→        transform:translate3d(-10px,0,0)
+  1316→    }
+  1317→     to{
+  1318→        opacity:1;
+  1319→        transform:none
+  1320→    }
+  1321→}
+  1322→ @keyframes fadeOutLeft {
+  1323→     from{
+  1324→        opacity:1
+  1325→    }
+  1326→     to{
+  1327→        opacity:0;
+  1328→        transform:translate3d(-10px,0,0)
+  1329→    }
+  1330→}
+  1331→ @keyframes fadeInRight {
+  1332→     from{
+  1333→        opacity:0;
+  1334→        transform:translate3d(10px,0,0)
+  1335→    }
+  1336→     to{
+  1337→        opacity:1;
+  1338→        transform:none
+  1339→    }
+  1340→}
+  1341→ .fadeInRight{
+  1342→    animation-name:fadeInRight
+  1343→}
+  1344→ @keyframes fadeOutRight {
+  1345→     from{
+  1346→        opacity:1
+  1347→    }
+  1348→     to{
+  1349→        opacity:0;
+  1350→        transform:translate3d(10px,0,0)
+  1351→    }
+  1352→}
+  1353→ .fadeOutRight{
+  1354→    animation-name:fadeOutRight
+  1355→}
+  1356→ .home-ad .widget > .widget-title{
+  1357→    display:none
+  1358→}
+  1359→ .home-ad .widget-content{
+  1360→    float:left;
+  1361→    width:728px;
+  1362→    max-width:100%;
+  1363→    line-height:0;
+  1364→    margin:0 0 40px
+  1365→}
+  1366→#hot-wrapper-outer{
+  1367→    background:#FDF2FF;
+  1368→    padding:30px 0;
+  1369→}
+  1370→ #hot-wrapper{
+  1371→    margin:0 auto;
+  1372→}
+  1373→ #hot-section .widget,#hot-section .widget > .widget-title{
+  1374→    display:none
+  1375→}
+  1376→ #hot-section .show-hot, #hot-section .widget.PopularPosts{
+  1377→    display:block!important
+  1378→}
+  1379→ #hot-section .show-hot .widget-content, #hot-section .PopularPosts .widget-content{
+  1380→    position:relative;
+  1381→    overflow:hidden;
+  1382→    padding:0;
+  1383→    box-sizing: border-box;
+  1384→    margin:0;
+  1385→}
+  1386→ .hot-loader{
+  1387→    position:relative;
+  1388→    height:200px;
+  1389→    overflow:hidden;
+  1390→    display:block
+  1391→}
+  1392→ .hot-loader:after{
+  1393→    content:'';
+  1394→    position:absolute;
+  1395→    top:50%;
+  1396→    left:50%;
+  1397→    width:26px;
+  1398→    height:26px;
+  1399→    margin:-16px 0 0 -16px;
+  1400→    border:3px solid #eaeaea;
+  1401→    border-left-color:$(main.color);
+  1402→    border-right-color:$(main.color);
+  1403→    border-radius:100%;
+  1404→    animation:spinner .8s infinite linear;
+  1405→    transform-origin:center
+  1406→}
+  1407→ @-webkit-keyframes spinner {
+  1408→     0%{
+  1409→        -webkit-transform:rotate(0deg);
+  1410→        transform:rotate(0deg)
+  1411→    }
+  1412→     to{
+  1413→        -webkit-transform:rotate(1turn);
+  1414→        transform:rotate(1turn)
+  1415→    }
+  1416→}
+  1417→ @keyframes spinner {
+  1418→     0%{
+  1419→        -webkit-transform:rotate(0deg);
+  1420→        transform:rotate(0deg)
+  1421→    }
+  1422→     to{
+  1423→        -webkit-transform:rotate(1turn);
+  1424→        transform:rotate(1turn)
+  1425→    }
+  1426→}
+  1427→ ul.hot-posts, .PopularPosts ul.hot-posts{
+  1428→    position:relative;
+  1429→    overflow:hidden;
+  1430→    margin:0
+  1431→}
+  1432→ .hot-posts .hot-item, PopularPosts .hot-posts .hot-item{
+  1433→    position:relative;
+  1434→    float:right;
+  1435→    width: calc(42% - 20px);
+  1436→    overflow:hidden;
+  1437→    box-sizing:border-box;
+  1438→    padding:20px 20px 0;
+  1439→    margin:0;
+  1440→    background: #47164f;
+  1441→}
+  1442→.hot-posts .hot-item:last-child, .PopularPosts .hot-posts .hot-item:last-child {
+  1443→    border: 0;
+  1444→    padding:20px;
+  1445→}
+  1446→ .hot-posts .item-0, .PopularPosts .hot-posts .item-0{
+  1447→    float:left;
+  1448→   width: calc(58% - 10px);
+  1449→    height: 100%;
+  1450→   padding:0;
+  1451→    margin-bottom:0;
+  1452→}
+  1453→  .hot-item-inner, PopularPosts .hot-item-inner{
+  1454→    position:relative;
+  1455→    float:left;
+  1456→    width:100%;
+  1457→    height:100%;
+  1458→    overflow:hidden;
+  1459→    display:block;
+  1460→}
+  1461→.hot-posts .hot-item .post-image-wrap, .PopularPosts .hot-posts .hot-item .post-image-wrap {
+  1462→    position: relative;
+  1463→    display: block;
+  1464→    width: 100%;
+  1465→    height: 100%;
+  1466→}
+  1467→
+  1468→ .hot-posts .post-image-link, .PopularPosts .hot-posts .post-image-link{
+  1469→    float:left;
+  1470→    width:180px;
+  1471→    height:125px;
+  1472→    position:relative;
+  1473→    overflow:hidden;
+  1474→    display:block;
+  1475→    margin:0 12px 0 0;
+  1476→}
+  1477→ .hot-posts .item-0 .post-image-link, .PopularPosts .hot-posts .item-0 .post-image-link{
+  1478→    width:100%;
+  1479→    height:415px;
+  1480→    margin:0;
+  1481→}
+  1482→.hot-posts .post-image-link .post-thumb, .PopularPosts .hot-posts .post-image-link .post-thumb {
+  1483→
+  1484→}
+  1485→.hot-posts .item-0 .post-image-link:before, .PopularPosts .hot-posts .item-0 .post-image-link:before {
+  1486→    content: '';
+  1487→    position: absolute;
+  1488→    left: 0;
+  1489→    right: 0;
+  1490→    bottom: 0;
+  1491→    height: 70%;
+  1492→    background-image: linear-gradient(to bottom,transparent,rgba(0,0,0,0.8));
+  1493→    -webkit-backface-visibility: hidden;
+  1494→    backface-visibility: hidden;
+  1495→    z-index: 2;
+  1496→    opacity: 1;
+  1497→    margin: 0;
+  1498→    transition: opacity .25s ease;
+  1499→}
+  1500→ .hot-posts .post-info, .PopularPosts .hot-posts .post-info{
+  1501→    overflow:hidden;
+  1502→    z-index:5;
+  1503→    box-sizing:border-box;
+  1504→    padding:0;
+  1505→}
+  1506→.hot-posts .item-0 .post-info, .PopularPosts .hot-posts .item-0 .post-info {
+  1507→    background:#ffffff;
+  1508→    overflow: hidden;
+  1509→    z-index: 5;
+  1510→    box-sizing: border-box;
+  1511→    padding: 20px;
+  1512→    width: 100%;
+  1513→}
+  1514→ .hot-posts .post-tag, .PopularPosts .hot-posts .post-tag{
+  1515→      position:static;
+  1516→       height: auto;
+  1517→    display: inline-block;
+  1518→    font-size: 13px;
+  1519→    font-weight: 500;
+  1520→    padding:0;
+  1521→    margin: 0 0 8px;
+  1522→    box-sizing: border-box;
+  1523→    background: none;
+  1524→    color: $(main.color);
+  1525→}
+  1526→ .hot-posts .item-0 .post-tag, .PopularPosts .hot-posts .item-0 .post-tag{
+  1527→    height: auto;
+  1528→    display: inline-block;
+  1529→    font-size: 12px;
+  1530→    font-weight: 400;
+  1531→    padding: 6px 8px;
+  1532→    margin: 0 0 10px;
+  1533→    background:$(main.color);
+  1534→    color:#fff;
+  1535→    border-radius: 2px;
+  1536→    box-sizing: border-box;
+  1537→}
+  1538→ .post-tag{
+  1539→    position:absolute;
+  1540→    top:15px;
+  1541→    left:15px;
+  1542→    height:18px;
+  1543→    z-index:5;
+  1544→    background-color:$(main.color);
+  1545→    color:#fff;
+  1546→    font-size:10px;
+  1547→    line-height:18px;
+  1548→    font-weight:700;
+  1549→    text-transform:uppercase;
+  1550→    padding:0 6px
+  1551→}
+  1552→.index-post .post-info .post-tag{
+  1553→position: static;
+  1554→   height: 22px;
+  1555→    line-height: 22px;
+  1556→    padding: 0 8px;
+  1557→    margin-bottom:7px;
+  1558→    font-size: 12px;
+  1559→  text-transform:capitalize;
+  1560→font-weight: 400;
+  1561→    background: $(main.color);
+  1562→    border: 0;
+  1563→    color: #ffffff;
+  1564→}
+  1565→ .hot-posts .post-title, .PopularPosts .hot-posts .post-title{
+  1566→    font-size:16px;
+  1567→    font-weight:600;
+  1568→    display:block;
+  1569→    line-height:1.3em;
+  1570→    margin:0 0 7px;
+  1571→}
+  1572→ .hot-posts .item-0 .post-title, .PopularPosts .hot-posts .item-0 .post-title {
+  1573→     font-size:26px;
+  1574→    margin:0 0 7px;
+  1575→  line-height:1.5em;
+  1576→}
+  1577→ .hot-posts .post-title a, .PopularPosts .hot-posts .post-title a{
+  1578→    color:#ffffff;
+  1579→    display: -webkit-box;
+  1580→    -webkit-line-clamp: 2;
+  1581→    -webkit-box-orient: vertical;
+  1582→    overflow: hidden;
+  1583→}
+  1584→.hot-posts .post-title a:hover, .PopularPosts .hot-posts .post-title a:hover{
+  1585→color:$(main.color)
+  1586→}
+  1587→ .hot-posts .item-0 .post-title a, .PopularPosts .hot-posts .item-0 .post-title a{
+  1588→  color:$(title.color);
+  1589→}
+  1590→ .hot-posts .post-meta, .PopularPosts .hot-posts .post-meta{
+  1591→    font-size:11px;
+  1592→    color:#afafaf
+  1593→}
+  1594→.PopularPosts .hot-posts .post-info .post-meta .post-date {
+  1595→margin-top:0;
+  1596→}
+  1597→ .show-hot .no-posts, .PopularPosts .no-posts{
+  1598→    width:100%;
+  1599→text-align:center;
+  1600→}
+  1601→#grid-wrapper {
+  1602→    overflow: hidden;
+  1603→}
+  1604→#grid-wrapper .container {
+  1605→    margin: 0 auto;
+  1606→}
+  1607→#grid-wrapper  .widget {
+  1608→    display: none;
+  1609→}
+  1610→.featured-grid1 {  
+  1611→    margin: 0 0 30px;
+  1612→}
+  1613→.featured-grid2 {
+  1614→    margin: 0 0 30px;
+  1615→}
+  1616→#grid-wrapper .show-grid  {
+  1617→    display: block;
+  1618→    margin: 0;
+  1619→}
+  1620→#grid-wrapper  .widget > .widget-title{
+  1621→position: relative;
+  1622→float: left;
+  1623→width: 100%;
+  1624→height: 32px;
+  1625→display: block;
+  1626→margin:0 0 20px;
+  1627→}
+  1628→#grid-wrapper  .widget > .widget-title > h3 {
+  1629→position: relative;
+  1630→float: left;
+  1631→height: 31px;
+  1632→font-size: 14px;
+  1633→color: #ffffff;
+  1634→text-transform: capitalize;
+  1635→line-height: 31px;
+  1636→padding: 0 15px;
+  1637→margin: 0;
+  1638→}
+  1639→#grid-wrapper .hot-loader {
+  1640→    height: 100px;
+  1641→}
+  1642→#grid-wrapper .show-grid .widget-content {
+  1643→    float:left;
+  1644→    width:100%;
+  1645→    position: relative;
+  1646→    overflow: hidden;  
+  1647→    padding: 0;
+  1648→    box-sizing: border-box;
+  1649→}
+  1650→ul.grid-big{
+  1651→    display: grid;
+  1652→    grid-template-columns: repeat(3,1fr);
+  1653→    grid-gap: 30px;
+  1654→}
+  1655→ .grid-big li{
+  1656→    position:relative;
+  1657→    float:left;
+  1658→    width:100%;
+  1659→    overflow:hidden;
+  1660→    box-sizing:border-box;
+  1661→    padding:0;
+  1662→    margin:0
+  1663→}
+  1664→ .grid-big .feat-inner{
+  1665→    position:relative;
+  1666→    float:left;
+  1667→    width:100%;
+  1668→    overflow:hidden
+  1669→}
+  1670→ .grid-big .post-image-link{
+  1671→    position:relative;
+  1672→    float:left;
+  1673→    width:100%;
+  1674→    height:180px;
+  1675→    display:block;
+  1676→    overflow:hidden;
+  1677→    margin:0 0 13px
+  1678→}
+  1679→ .grid-big .post-title{
+  1680→    overflow:hidden;
+  1681→    font-size:18px;
+  1682→    font-weight:500;
+  1683→    line-height:1.4em;
+  1684→    margin:0 0 10px
+  1685→}
+  1686→ .grid-big .post-info{
+  1687→    float:left;
+  1688→    width:100%
+  1689→}
+  1690→ .grid-big .post-title a{
+  1691→    color:$(title.color);
+  1692→    transition:color .17s ease
+  1693→}
+  1694→ .grid-big .post-title a:hover{
+  1695→    color:$(main.color)
+  1696→}
+  1697→.home-ad .widget > .widget-title{
+  1698→    display:none
+  1699→}
+  1700→ .home-ad .widget{
+  1701→    width:728px;
+  1702→    max-width:100%;
+  1703→    margin:0 auto
+  1704→}
+  1705→ .home-ad .widget .widget-content{
+  1706→    position:relative;
+  1707→    width:100%;
+  1708→    max-height:90px;
+  1709→    overflow:hidden;
+  1710→    line-height:1;
+  1711→    margin:0 0 30px
+  1712→}
+  1713→.title-wrap{
+  1714→    position:relative;
+  1715→    float:left;
+  1716→    width:100%;
+  1717→    height:40px;
+  1718→    background-color: $(main.color);
+  1719→    display:block;
+  1720→    margin:0
+  1721→}
+  1722→.item .title-wrap{
+  1723→border-width: 0 0 1px 0;
+  1724→}
+  1725→ .title-wrap > h3{
+  1726→    position:relative;
+  1727→    float:left;
+  1728→    height:40px;
+  1729→    font-size:12px;
+  1730→    color:#ffffff;
+  1731→    text-transform:uppercase;
+  1732→    line-height:40px;
+  1733→    padding:0 15px;
+  1734→    margin:0
+  1735→}
+  1736→.featured-posts .widget-title{
+  1737→    position:relative;
+  1738→    float:left;
+  1739→    width:100%;
+  1740→    height:32px;
+  1741→    background-color:$(main.color);
+  1742→    display:block;
+  1743→    margin:0 0 20px
+  1744→}
+  1745→.featured-posts .widget-title > h3{
+  1746→    position:relative;
+  1747→    float:left;
+  1748→    height:32px;
+  1749→    font-size:12px;
+  1750→    color:#ffffff;
+  1751→    text-transform:uppercase;
+  1752→    line-height:32px;
+  1753→    padding:0 15px;
+  1754→    margin:0
+  1755→}
+  1756→ a.view-all{
+  1757→        float: right;
+  1758→    height: 18px;
+  1759→    font-size: 9px;
+  1760→    line-height: 18px;
+  1761→    border-radius: 3px;
+  1762→    margin-top: 11px;
+  1763→    margin-right: 7px;
+  1764→    padding: 0 5px;
+  1765→    font-weight: bold;
+  1766→    text-transform: uppercase;
+  1767→    transition: background .17s ease;
+  1768→    background-color: #d1e9f9;
+  1769→    color:$(title.color);
+  1770→}
+  1771→ a.view-all:hover{
+  1772→        background: $(main.color);
+  1773→}
+  1774→ a.view-all:after{
+  1775→    content:'\f105';
+  1776→    float:right;
+  1777→    font-weight:900;
+  1778→    font-family:'Font Awesome 5 Free';
+  1779→    margin:0 0 0 3px
+  1780→}
+  1781→
+  1782→ .queryMessage{
+  1783→    overflow:hidden;
+  1784→    background-color:#fff;
+  1785→    color:$(title.color);
+  1786→    font-size:13px;
+  1787→    font-weight:400;
+  1788→    padding:8px 10px;
+  1789→    margin:0 0 25px;
+  1790→    border:1px solid #ebebf3;
+  1791→    border-radius:3px
+  1792→}
+  1793→ .queryMessage .query-info{
+  1794→    margin:0 5px
+  1795→}
+  1796→ .queryMessage .search-query,.queryMessage .search-label{
+  1797→    font-weight:700;
+  1798→    text-transform:uppercase
+  1799→}
+  1800→ .queryMessage .search-query:before,.queryMessage .search-label:before{
+  1801→    content:"\201c"
+  1802→}
+  1803→ .queryMessage .search-query:after,.queryMessage .search-label:after{
+  1804→    content:"\201d"
+  1805→}
+  1806→ .queryMessage a.show-more{
+  1807→    float:right;
+  1808→    color:$(main.color);
+  1809→    text-decoration:underline;
+  1810→    transition:opacity .17s
+  1811→}
+  1812→ .queryMessage a.show-more:hover{
+  1813→    opacity:.8
+  1814→}
+  1815→ .queryEmpty{
+  1816→    font-size:13px;
+  1817→    font-weight:400;
+  1818→    padding:10px 0;
+  1819→    margin:0 0 25px;
+  1820→    text-align:center
+  1821→}
+  1822→ 
+  1823→ .custom-widget li{
+  1824→    overflow:hidden;
+  1825→    padding:15px 0 0;
+  1826→    margin:15px 0 0;
+  1827→    border-top:1px dotted #ebebf3
+  1828→}
+  1829→ .custom-widget li:first-child{
+  1830→    padding:0;
+  1831→    margin:0;
+  1832→    border:0
+  1833→}
+  1834→ .custom-widget .post-image-link{
+  1835→    position:relative;
+  1836→    width:75px;
+  1837→    height:60px;
+  1838→    float:left;
+  1839→    overflow:hidden;
+  1840→    display:block;
+  1841→    vertical-align:middle;
+  1842→    margin:0 12px 0 0;
+  1843→    border-radius:3px
+  1844→}
+  1845→ .custom-widget .post-info{
+  1846→    overflow:hidden
+  1847→}
+  1848→ .custom-widget .post-title{
+  1849→    overflow:hidden;
+  1850→    font-size:15px;
+  1851→    font-weight:400;
+  1852→    line-height:1.5em;
+  1853→    margin:0
+  1854→}
+  1855→ .custom-widget .post-title a{
+  1856→    display:block;
+  1857→    color:$(title.color);
+  1858→    transition:color .17s
+  1859→}
+  1860→ .custom-widget li:hover .post-title a{
+  1861→    color:$(main.color)
+  1862→}
+  1863→ .index-post-wrap{
+  1864→   display: block;
+  1865→box-sizing: border-box;
+  1866→    padding: 20px 0;
+  1867→    margin: 0;
+  1868→}
+  1869→.grid-posts {
+  1870→
+  1871→}
+  1872→ .blog-post{
+  1873→    display:block;
+  1874→    overflow:hidden;
+  1875→    word-wrap:break-word
+  1876→}
+  1877→ .index-post{
+  1878→  display: block;
+  1879→    margin: 0 0 30px;
+  1880→    box-sizing:border-box;
+  1881→    padding: 0;
+  1882→    background:#ffffff;
+  1883→}
+  1884→.index-post:last-child {
+  1885→    margin: 0;
+  1886→}
+  1887→.index-post-inside-wrap {
+  1888→float: left;
+  1889→    width: 100%;
+  1890→    height: auto;
+  1891→box-sizing: border-box;
+  1892→}
+  1893→ .index-post .post-image-wrap{
+  1894→   float: left;
+  1895→    width: 280px;
+  1896→    height: 210px;
+  1897→    overflow: hidden;
+  1898→    margin: 0 20px 0 0;
+  1899→}
+  1900→ .index-post .post-image-wrap .post-image-link{
+  1901→    width:100%;
+  1902→    height:100%;
+  1903→    position:relative;
+  1904→    display:block;
+  1905→    z-index:1;
+  1906→    overflow:hidden;
+  1907→}
+  1908→ .index-post .post-info{
+  1909→    overflow:hidden
+  1910→}
+  1911→ .index-post .post-info > h2{
+  1912→    float:left;
+  1913→    overflow:hidden;
+  1914→    font-size:22px;
+  1915→    font-weight:500;
+  1916→    line-height:1.4em;
+  1917→    text-decoration:none;
+  1918→    margin:0
+  1919→}
+  1920→ .index-post .post-info > h2 > a{
+  1921→    float:left;
+  1922→    display:block;
+  1923→    color:$(title.color);
+  1924→    transition:color .17s
+  1925→}
+  1926→ .index-post .post-info > h2 > a:hover{
+  1927→    color:$(main.color)
+  1928→}
+  1929→ .widget iframe,.widget img{
+  1930→    max-width:100%
+  1931→}
+  1932→ .post-meta{
+  1933→    overflow:hidden;
+  1934→    color:#aaa;
+  1935→    font-size:13px;
+  1936→    font-weight:400;
+  1937→    padding:0 1px
+  1938→}
+  1939→ .post-meta .post-author,.post-meta .post-date{
+  1940→    float:left;
+  1941→    display:inline-block;
+  1942→    margin:0 10px 0 0
+  1943→}
+  1944→ .post-meta .post-author:before,.post-meta .post-date:before{
+  1945→   font-family:'Font Awesome 5 Free';
+  1946→    color:$(main.dark.color);
+  1947→    font-weight:900;
+  1948→    margin:0 3px 0 0;
+  1949→font-size: 11px;
+  1950→}
+  1951→.hot-posts .post-meta .post-author:before, .hot-posts .post-meta .post-date:before, .footer .post-meta .post-author:before, .footer .post-meta .post-date:before {
+  1952→   color:#afafaf;
+  1953→}
+  1954→ .post-meta .post-author:before{
+  1955→    content:'BY';   
+  1956→    font-family: 'Alegreya',Arial,sans-serif;
+  1957→}
+  1958→ .post-meta .post-date:before{
+  1959→    content:'\f073'
+  1960→}
+  1961→ .post-meta a{
+  1962→    color:#aaa;
+  1963→    transition:color .17s
+  1964→}
+  1965→ .post-meta a:hover{
+  1966→    color:$(main.color)
+  1967→}
+  1968→ .post-meta .post-author .meta-avatar{
+  1969→    float:left;
+  1970→    height:20px;
+  1971→    width:20px;
+  1972→    overflow:hidden;
+  1973→    margin:0 7px 0 0;
+  1974→    border-radius:100%;
+  1975→    box-shadow:0 0 3px rgba(0,0,0,0.1)
+  1976→}
+  1977→ .post-meta .post-author .meta-avatar img{
+  1978→    display:block;
+  1979→    width:100%;
+  1980→    height:100%;
+  1981→    border-radius:100%
+  1982→}
+  1983→ .index-post .post-meta{
+  1984→    margin:0
+  1985→}
+  1986→ .post-snippet{
+  1987→    position:relative;
+  1988→    display:block;
+  1989→    overflow:hidden;
+  1990→    font-size:13px;
+  1991→    line-height:1.5em;
+  1992→    font-weight:400;
+  1993→    margin:0 0 7px;
+  1994→}
+  1995→ .index-post-footer{
+  1996→    position:relative;
+  1997→    float:left;
+  1998→    width:100%;
+  1999→    padding: 0;
+  2000→    margin: 7px 0 0;
+
+[showing lines 1-2000 of 8178; use offset=2001 with limit to continue reading]

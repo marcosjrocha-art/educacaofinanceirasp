@@ -1,0 +1,402 @@
+     1→     1→<?xml version="1.0" encoding="UTF-8" ?>
+     2→     2→<!DOCTYPE html>
+     3→     3→<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+     4→     4→  <head>
+     5→     5→    <b:include name='theme-head'/>
+     6→     6→ <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' rel='stylesheet'/>
+     7→     7→     <b:if cond='!data:view.isLayoutMode'>
+     8→     8→<!-- Template Style CSS -->
+     9→     9→<b:skin version='1.0.0'><![CDATA[/* 
+    10→    10→-----------------------------------------------
+    11→    11→Blogger Template Style
+    12→    12→Name:        Newsim
+    13→    13→License:     Free Version
+    14→    14→Version:     1.0
+    15→    15→Author:      TemplatesYard
+    16→    16→Author Url:  https://www.templatesyard.com/
+    17→    17→----------------------------------------------- */
+    18→    18→
+    19→    19→/*
+    20→    20→<!-- Variable definitions -->
+    21→    21→<Variable name="keycolor" description="Main Color" type="color" default="$(main.color)" value="#fe5301"/>
+    22→    22→<Variable name="followByEmail" description="Follow By Email Text" type="string" default="Get all latest content delivered straight to your inbox." value="Get all latest content delivered straight to your inbox."/>
+    23→    23→
+    24→    24→<Group description="Theme Colors" selector="body">
+    25→    25→ <Variable name="main.color" description="Theme Color" type="color" default="#fe5301" value="#fe5301"/>
+    26→    26→  <Variable name="main.dark.color" description="Dark Color" type="color" default="#000000" value="#000000"/>
+    27→    27→  <Variable name="header.bg" description="Header Background" type="color" default="#47164F" value="#47164F"/>
+    28→    28→  <Variable name="menu.color" description="Menu Color" type="color" default="#ffffff" value="#ffffff"/>
+    29→    29→  <Variable name="submenu.bg" description="SubMenu Background" type="color" default="#ffffff" value="#ffffff"/>
+    30→    30→  <Variable name="submenu.color" description="SubMenu Color" type="color" default="#1f2024" value="#1f2024"/>
+    31→    31→  <Variable name="title.color" description="Title Color" type="color" default="#000000" value="#000000"/>
+    32→    32→  <Variable name="widget.title" description="Widget Title Color" type="color" default="#000000" value="#000000"/>
+    33→    33→  <Variable name="footer.bg" description="Footer Backgroundr" type="color" default="#47164F" value="#47164F"/>
+    34→    34→  <Variable name="footer.color" description="Footer Color" type="color" default="#ffffff" value="#ffffff"/>
+    35→    35→</Group>
+    36→    36→
+    37→    37→<Group description="Theme Body" selector="body">
+    38→    38→  <Variable name="body.background.color" description="Body Background Color" type="color" default="#f2f6f8"  value="#f2f6f8"/>
+    39→    39→  <Variable name="body.background" description="Background" type="background" color="$(body.background.color)" default="$(color) url() repeat fixed top left" value="$(color) url() repeat fixed top left"/>
+    40→    40→  <Variable name="body.text.color" description="Text Color" type="color" default="#656565"  value="#656565"/>
+    41→    41→  <Variable name="body.link.color" description="Link Color" type="color" default="$(main.color)"  value="#fe5301"/>
+    42→    42→</Group>
+    43→    43→ 
+    44→    44→<!-- Extra Variables -->
+    45→    45→<Variable name="body.text.font" description="Font" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    46→    46→<Variable name="title.font" description="Title Font" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    47→    47→<Variable name="posts.background.color" description="Post background color" hideEditor="true" type="color" default="#ffffff"  value="#ffffff"/>
+    48→    48→<Variable name="tabs.font" description="Font 2" hideEditor="true" type="font" default="13px Roboto, sans-serif"  value="13px Roboto, sans-serif"/>
+    49→    49→<Variable name="posts.title.color" description="Post title color" hideEditor="true" type="color" default="#000000"  value="#000000"/>
+    50→    50→<Variable name="posts.text.color" description="Post text color" hideEditor="true" type="color" default="#656565"  value="#656565"/>
+    51→    51→<Variable name="posts.icons.color" description="Post icons color" hideEditor="true" type="color" default="$(main.color)"  value="#3c5a98"/>
+    52→    52→<Variable name="labels.background.color" description="Label background color" hideEditor="true" type="color" default="$(main.color)"  value="#3c5a98"/>
+    53→    53→*/
+    54→    54→
+    55→    55→/*-- Google Fonts --*/
+    56→    56→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96fp56N1.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    57→    57→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk967p56N1.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    58→    58→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96bp56N1.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    59→    59→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96np56N1.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    60→    60→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96Xp56N1.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    61→    61→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96Tp56N1.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    62→    62→@font-face{font-family:'Alegreya';font-style:italic;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    63→    63→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLsx6jx4w.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    64→    64→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLlx6jx4w.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    65→    65→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLtx6jx4w.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    66→    66→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLix6jx4w.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    67→    67→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLux6jx4w.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    68→    68→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLvx6jx4w.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    69→    69→@font-face{font-family:'Alegreya';font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/alegreya/v38/4UaBrEBBsBhlBjvfkSLhx6g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    70→    70→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xFIzIFKw.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    71→    71→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xMIzIFKw.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    72→    72→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xEIzIFKw.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    73→    73→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xLIzIFKw.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    74→    74→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51w0IzIFKw.woff2) format("woff2");unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF}
+    75→    75→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51wmIzIFKw.woff2) format("woff2");unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF}
+    76→    76→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xHIzIFKw.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    77→    77→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xGIzIFKw.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    78→    78→@font-face{font-family:'Roboto';font-style:italic;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOkCnqEu92Fr1Mu51xIIzI.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    79→    79→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+    80→    80→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+    81→    81→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");unicode-range:U+1F00-1FFF}
+    82→    82→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+    83→    83→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1MunmxKOzY.woff2) format("woff2");unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF}
+    84→    84→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1MujGxKOzY.woff2) format("woff2");unicode-range:U+0001-000C,U+000E-001F,U+007F-009F,U+20DD-20E0,U+20E2-20E4,U+2150-218F,U+2190,U+2192,U+2194-2199,U+21AF,U+21E6-21F0,U+21F3,U+2218-2219,U+2299,U+22C4-22C6,U+2300-243F,U+2440-244A,U+2460-24FF,U+25A0-27BF,U+2800-28FF,U+2921-2922,U+2981,U+29BF,U+29EB,U+2B00-2BFF,U+4DC0-4DFF,U+FFF9-FFFB,U+10140-1018E,U+10190-1019C,U+101A0,U+101D0-101FD,U+102E0-102FB,U+10E60-10E7E,U+1D2C0-1D2D3,U+1D2E0-1D37F,U+1F000-1F0FF,U+1F100-1F1AD,U+1F1E6-1F1FF,U+1F30D-1F30F,U+1F315,U+1F31C,U+1F31E,U+1F320-1F32C,U+1F336,U+1F378,U+1F37D,U+1F382,U+1F393-1F39F,U+1F3A7-1F3A8,U+1F3AC-1F3AF,U+1F3C2,U+1F3C4-1F3C6,U+1F3CA-1F3CE,U+1F3D4-1F3E0,U+1F3ED,U+1F3F1-1F3F3,U+1F3F5-1F3F7,U+1F408,U+1F415,U+1F41F,U+1F426,U+1F43F,U+1F441-1F442,U+1F444,U+1F446-1F449,U+1F44C-1F44E,U+1F453,U+1F46A,U+1F47D,U+1F4A3,U+1F4B0,U+1F4B3,U+1F4B9,U+1F4BB,U+1F4BF,U+1F4C8-1F4CB,U+1F4D6,U+1F4DA,U+1F4DF,U+1F4E3-1F4E6,U+1F4EA-1F4ED,U+1F4F7,U+1F4F9-1F4FB,U+1F4FD-1F4FE,U+1F503,U+1F507-1F50B,U+1F50D,U+1F512-1F513,U+1F53E-1F54A,U+1F54F-1F5FA,U+1F610,U+1F650-1F67F,U+1F687,U+1F68D,U+1F691,U+1F694,U+1F698,U+1F6AD,U+1F6B2,U+1F6B9-1F6BA,U+1F6BC,U+1F6C6-1F6CF,U+1F6D3-1F6D7,U+1F6E0-1F6EA,U+1F6F0-1F6F3,U+1F6F7-1F6FC,U+1F700-1F7FF,U+1F800-1F80B,U+1F810-1F847,U+1F850-1F859,U+1F860-1F887,U+1F890-1F8AD,U+1F8B0-1F8BB,U+1F8C0-1F8C1,U+1F900-1F90B,U+1F93B,U+1F946,U+1F984,U+1F996,U+1F9E9,U+1FA00-1FA6F,U+1FA70-1FA7C,U+1FA80-1FA89,U+1FA8F-1FAC6,U+1FACE-1FADC,U+1FADF-1FAE9,U+1FAF0-1FAF8,U+1FB00-1FBFF}
+    85→    85→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
+    86→    86→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+    87→    87→@font-face{font-family:'Roboto';font-style:normal;font-weight:100 900;font-stretch:75% 100%;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v48/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    88→    88→
+    89→    89→/*-- Reset CSS --*/
+    90→    90→ .CSS_LIGHTBOX{z-index:999999!important}.CSS_LIGHTBOX_ATTRIBUTION_INDEX_CONTAINER .CSS_HCONT_CHILDREN_HOLDER > .CSS_LAYOUT_COMPONENT.CSS_HCONT_CHILD:first-child > .CSS_LAYOUT_COMPONENT{opacity:0}a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{
+    91→    91→    padding:0;
+    92→    92→    border:0;
+    93→    93→    outline:0;
+    94→    94→    vertical-align:baseline;
+    95→    95→    background:0 0;
+    96→    96→    text-decoration:none
+    97→    97→}
+    98→    98→#google_translate_element { clear: both; }.thread-expanded .thread-count a { display: none; }.comments .continue { display: none!important; } 
+    99→    99→form,textarea,input,button{
+   100→   100→    -webkit-appearance:none;
+   101→   101→    -moz-appearance:none;
+   102→   102→    appearance:none;
+   103→   103→    border-radius:0
+   104→   104→}
+   105→   105→dl,ul{
+   106→   106→    list-style-position:inside;
+   107→   107→    font-weight:400;
+   108→   108→    list-style:none
+   109→   109→}
+   110→   110→ul li{
+   111→   111→    list-style:none
+   112→   112→}
+   113→   113→caption,th{
+   114→   114→    text-align:center
+   115→   115→}
+   116→   116→img{
+   117→   117→    border:none;
+   118→   118→    position:relative
+   119→   119→}
+   120→   120→a,a:visited{
+   121→   121→    text-decoration:none
+   122→   122→}
+   123→   123→.clearfix{
+   124→   124→    clear:both
+   125→   125→}
+   126→   126→.section,.widget,.widget ul{
+   127→   127→    margin:0;
+   128→   128→    padding:0
+   129→   129→}
+   130→   130→a{
+   131→   131→    color:$(body.link.color)
+   132→   132→}
+   133→   133→* {
+   134→   134→    box-sizing: border-box;
+   135→   135→}
+   136→   136→/* visited link */
+   137→   137→.post-body a:visited {
+   138→   138→  color: blue;
+   139→   139→}
+   140→   140→
+   141→   141→/* selected link */
+   142→   142→a:active {
+   143→   143→  color: blue;
+   144→   144→}
+   145→   145→a img{
+   146→   146→    border:0
+   147→   147→}
+   148→   148→abbr{
+   149→   149→    text-decoration:none
+   150→   150→}
+   151→   151→.CSS_LIGHTBOX{
+   152→   152→    z-index:999999!important
+   153→   153→}
+   154→   154→.separator a{
+   155→   155→    clear:none!important;
+   156→   156→    float:none!important;
+   157→   157→    margin-left:0!important;
+   158→   158→    margin-right:0!important
+   159→   159→}
+   160→   160→#navbar-iframe,.widget-item-control,a.quickedit,.home-link,.feed-links{
+   161→   161→    display:none!important
+   162→   162→}
+   163→   163→.center{
+   164→   164→    display:table;
+   165→   165→    margin:0 auto;
+   166→   166→    position:relative
+   167→   167→}
+   168→   168→.widget > h2,.widget > h3{
+   169→   169→    display:none
+   170→   170→}
+   171→   171→/*-- Body Content CSS --*/
+   172→   172→ body{
+   173→   173→    background:$(body.background);
+   174→   174→    background-color:$(body.background.color);
+   175→   175→    font-family:"Roboto", sans-serif;
+   176→   176→    font-size:14px;
+   177→   177→    font-weight:400;
+   178→   178→    color:$(body.text.color);
+   179→   179→    word-wrap:break-word;
+   180→   180→    margin:0;
+   181→   181→    padding:0
+   182→   182→}
+   183→   183→ h1,h2,h3,h4,h5,h6{
+   184→   184→    font-family:'Alegreya',Arial,sans-serif;
+   185→   185→}
+   186→   186→ #outer-wrapper{
+   187→   187→    margin:0 auto;
+   188→   188→    background: #ffffff;
+   189→   189→    box-shadow:0 0 5px rgba(0,0,0,.1)
+   190→   190→}
+   191→   191→ .row{
+   192→   192→    width:1078px
+   193→   193→}
+   194→   194→ #content-wrapper{
+   195→   195→    margin:40px auto 30px;
+   196→   196→}
+   197→   197→ #content-wrapper > .container{
+   198→   198→    margin:0
+   199→   199→}
+   200→   200→ #main-wrapper{
+   201→   201→    float:left;
+   202→   202→    overflow:hidden;
+   203→   203→    width:calc(100% - (320px + 30px));
+   204→   204→    box-sizing:border-box;
+   205→   205→    word-wrap:break-word;
+   206→   206→    padding:0;
+   207→   207→    margin:0
+   208→   208→}
+   209→   209→ #sidebar-wrapper{
+   210→   210→    float:right;
+   211→   211→    overflow:hidden;
+   212→   212→    width:320px;
+   213→   213→    box-sizing:border-box;
+   214→   214→    word-wrap:break-word;
+   215→   215→    padding:0
+   216→   216→}
+   217→   217→ .post-image-wrap{
+   218→   218→    position:relative;
+   219→   219→    display:block
+   220→   220→}
+   221→   221→ .post-image-link,.about-author .avatar-container,.comments .avatar-image-container{
+   222→   222→    background-color:rgba(155,155,155,0.07);
+   223→   223→    color:transparent!important
+   224→   224→}
+   225→   225→.index-post .post-thumb {
+   226→   226→  
+   227→   227→}
+   228→   228→ .post-thumb{
+   229→   229→    display:block;
+   230→   230→    position:relative;
+   231→   231→    width:100%;
+   232→   232→    height:100%;
+   233→   233→   object-fit:cover;
+   234→   234→    object-position: top;
+   235→   235→    z-index:1;
+   236→   236→    opacity: 0;
+   237→   237→    transition:opacity .17s ease,transform .35s ease
+   238→   238→}
+   239→   239→.post-thumb.lazy-yard {
+   240→   240→    opacity: 1;
+   241→   241→}
+   242→   242→ .post-image-link:hover .post-thumb,.post-image-wrap:hover .post-image-link .post-thumb,.hot-item-inner:hover .post-image-link .post-thumb{
+   243→   243→   transform: scale(1.05);
+   244→   244→}
+   245→   245→ .post-image-link:hover .post-thumb,.post-image-wrap:hover .post-image-link .post-thumb{
+   246→   246→    opacity:.9
+   247→   247→}
+   248→   248→ .item-post .post-body img{
+   249→   249→    max-width:100%;
+   250→   250→opacity: 0;
+   251→   251→    transition: opacity .17s ease,transform .35s ease;
+   252→   252→}
+   253→   253→.item-post .post-body img.lazy-yard{
+   254→   254→opacity: 1;
+   255→   255→}
+   256→   256→ .post-title a{
+   257→   257→    display:block
+   258→   258→}
+   259→   259→#top-bar{
+   260→   260→    width:100%;
+   261→   261→    height:34px;
+   262→   262→background-image: linear-gradient(90deg, $(header.bg) 0%, $(header.bg));
+   263→   263→    overflow:hidden;
+   264→   264→    margin:0
+   265→   265→}
+   266→   266→ #top-bar .container{
+   267→   267→    margin:0 auto
+   268→   268→}
+   269→   269→ .top-bar-nav{
+   270→   270→    position:relative;
+   271→   271→    float:left;
+   272→   272→    display:block
+   273→   273→}
+   274→   274→ .top-bar-nav .widget > .widget-title{
+   275→   275→    display:none
+   276→   276→}
+   277→   277→ .top-bar-nav ul li{
+   278→   278→    float:left
+   279→   279→}
+   280→   280→ .top-bar-nav ul li > a{
+   281→   281→    height:34px;
+   282→   282→    display:block;
+   283→   283→    color:$(menu.color);
+   284→   284→    font-size:12px;
+   285→   285→    font-weight:400;
+   286→   286→    line-height:34px;
+   287→   287→    margin:0 10px 0 0;
+   288→   288→    padding:0 5px;
+   289→   289→    transition:color .17s
+   290→   290→}
+   291→   291→ .top-bar-nav ul li:first-child > a{
+   292→   292→    padding:0 5px 0 0
+   293→   293→}
+   294→   294→ .top-bar-nav ul > li:hover > a{
+   295→   295→    color:$(main.color)
+   296→   296→}
+   297→   297→ .top-bar-social{
+   298→   298→    position:relative;
+   299→   299→    float:right;
+   300→   300→    display:block
+   301→   301→}
+   302→   302→ .top-bar-social .widget > .widget-title{
+   303→   303→    display:none
+   304→   304→}
+   305→   305→ .top-bar-social ul > li{
+   306→   306→    float:left;
+   307→   307→    display:inline-block
+   308→   308→}
+   309→   309→ .top-bar-social ul > li > a{
+   310→   310→    display:block;
+   311→   311→    color:$(menu.color);
+   312→   312→    text-decoration:none;
+   313→   313→    font-size:14px;
+   314→   314→    text-align:center;
+   315→   315→    line-height:34px;
+   316→   316→    padding:0 5px;
+   317→   317→    margin:0 0 0 10px;
+   318→   318→    transition:color .17s
+   319→   319→}
+   320→   320→.top-bar-social ul > li.facebook > a {
+   321→   321→    margin: 0;
+   322→   322→}
+   323→   323→ .top-bar-social ul > li:last-child > a{
+   324→   324→    padding:0 0 0 5px
+   325→   325→}
+   326→   326→ .top-bar-social ul > li:hover > a{
+   327→   327→    color:$(main.color)
+   328→   328→}
+   329→   329→ .social a:before{
+   330→   330→    display:inline-block;
+   331→   331→    font-family:'Font Awesome 5 Brands';
+   332→   332→    font-style:normal;
+   333→   333→    font-weight:400
+   334→   334→}
+   335→   335→ .social .facebook a:before{
+   336→   336→    content:"\f09a"
+   337→   337→}
+   338→   338→ .social .twitter a:before{
+   339→   339→    content:"\f099"
+   340→   340→}
+   341→   341→.social .x-twitter a:before{ content:"\e61b" }
+   342→   342→.social-color .x-twitter a{ background-color:#14171A }
+   343→   343→.social-text .x-twitter a:after{ content:"Twitter" } 
+   344→   344→ .social .gplus a:before{
+   345→   345→    content:"\f0d5"
+   346→   346→}
+   347→   347→ .social .rss a:before{
+   348→   348→    content:"\f09e";
+   349→   349→font-family:'Font Awesome 5 Free';
+   350→   350→font-weight:900
+   351→   351→}
+   352→   352→ .social .youtube a:before{
+   353→   353→    content:"\f167"
+   354→   354→}
+   355→   355→ .social .skype a:before{
+   356→   356→    content:"\f17e"
+   357→   357→}
+   358→   358→ .social .stumbleupon a:before{
+   359→   359→    content:"\f1a4"
+   360→   360→}
+   361→   361→ .social .tumblr a:before{
+   362→   362→    content:"\f173"
+   363→   363→}
+   364→   364→ .social .vk a:before{
+   365→   365→    content:"\f189"
+   366→   366→}
+   367→   367→ .social .stack-overflow a:before{
+   368→   368→    content:"\f16c"
+   369→   369→}
+   370→   370→ .social .github a:before{
+   371→   371→    content:"\f09b"
+   372→   372→}
+   373→   373→ .social .linkedin a:before{
+   374→   374→    content:"\f0e1"
+   375→   375→}
+   376→   376→ .social .dribbble a:before{
+   377→   377→    content:"\f17d"
+   378→   378→}
+   379→   379→ .social .soundcloud a:before{
+   380→   380→    content:"\f1be"
+   381→   381→}
+   382→   382→ .social .behance a:before{
+   383→   383→    content:"\f1b4"
+   384→   384→}
+   385→   385→ .social .digg a:before{
+   386→   386→    content:"\f1a6"
+   387→   387→}
+   388→   388→ .social .instagram a:before{
+   389→   389→    content:"\f16d"
+   390→   390→}
+   391→   391→ .social .pinterest a:before{
+   392→   392→    content:"\f0d2"
+   393→   393→}
+   394→   394→ .social .twitch a:before{
+   395→   395→    content:"\f1e8"
+   396→   396→}
+   397→   397→ .social .delicious a:before{
+   398→   398→    content:"\f1a5"
+   399→   399→}
+   400→   400→ .social .codepen a:before{
+
+[showing lines 1-400 of 2002; use offset=401 with limit to continue reading]
