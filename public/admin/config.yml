@@ -2,6 +2,7 @@ backend:
   name: github
   repo: marcosjrocha-art/educacaofinanceirasp
   branch: main
+  auth_type: pkce # Adicione esta linha
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
